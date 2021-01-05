@@ -15,11 +15,7 @@ class TestHrContractRate(common.TransactionCase):
         self.HrContract = self.env["hr.contract"]
 
     def test_compatibility(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",
@@ -34,11 +30,7 @@ class TestHrContractRate(common.TransactionCase):
         self.assertEqual(contract.amount_period, "month")
 
     def test_hourly(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",
@@ -55,11 +47,7 @@ class TestHrContractRate(common.TransactionCase):
         self.assertFalse(contract.is_wage_accurate)
 
     def test_daily(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",
@@ -76,11 +64,7 @@ class TestHrContractRate(common.TransactionCase):
         self.assertFalse(contract.is_wage_accurate)
 
     def test_weekly(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",
@@ -97,11 +81,7 @@ class TestHrContractRate(common.TransactionCase):
         self.assertFalse(contract.is_wage_accurate)
 
     def test_monthly(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",
@@ -118,11 +98,7 @@ class TestHrContractRate(common.TransactionCase):
         self.assertTrue(contract.is_wage_accurate)
 
     def test_quarterly(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",
@@ -139,11 +115,7 @@ class TestHrContractRate(common.TransactionCase):
         self.assertTrue(contract.is_wage_accurate)
 
     def test_annual(self):
-        employee = self.HrEmployee.create(
-            {
-                "name": "Employee",
-            }
-        )
+        employee = self.HrEmployee.create({"name": "Employee"})
         contract = self.HrContract.create(
             {
                 "name": "Contract",

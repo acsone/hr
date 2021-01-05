@@ -14,10 +14,6 @@
     "summary": "Employee's contract rate and period",
     "pre_init_hook": "pre_init_hook",
     "post_init_hook": "post_init_hook",
-    "depends": [
-        "hr_contract",
-    ],
-    "data": [
-        "views/hr_contract.xml",
-    ],
+    "depends": ["hr_contract"],
+    "data": ["views/hr_contract.xml"],
 }
